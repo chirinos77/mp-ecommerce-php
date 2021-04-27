@@ -34,6 +34,11 @@ $payer->address = array(
  "zip_code" => "1111"
 );
 $preference->payer = $payer ;
+$preference->payment_methods = array(
+ "excluded_payment_methods" => array(array("id" => "amex" ) ), 
+ "excluded_payment_types" => array(array("id" => "atm" ) ), 
+ "installments" => 6
+);
 $preference->back_urls = [ 
  'success' => "https://mp-chirinos77-php.herokuapp.com/back.php", 
  'pending' => "https://mp-chirinos77-php.herokuapp.com/back.php", 
