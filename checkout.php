@@ -33,7 +33,7 @@ $payer->address = array(
  "street_number" => "123",
  "zip_code" => "1111"
 );
-$preference->payer = $payer
+$preference->payer = $payer ;
 $preference->back_urls = [ 
  'success' => "https://mp-chirinos77-php.herokuapp.com/back.php", 
  'pending' => "https://mp-chirinos77-php.herokuapp.com/back.php", 
