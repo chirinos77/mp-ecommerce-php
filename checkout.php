@@ -9,9 +9,7 @@ $img=$_POST["img"];
 $title=$_POST["title"];
 $price=$_POST["price"];
 $unit=$_POST["unit"];
- 
 $preference = new MercadoPago\Preference();
- 
 $item = new MercadoPago\Item();
 $item->id=1234;
 $item->title = $title;
@@ -20,11 +18,8 @@ $item->unit_price = $price;
 $item->currency_id = "ARS";
 $item->description = "Dispositivo móvil de Tienda e-commerce";
 $item->picture_url = "https://mp-chirinos77-php.herokuapp.com/".$img;
-
 $items=array($item);
- 
 $preference->items = array($item);
- 
 $payer = new MercadoPago\Payer();
 $payer->name = "Lalo";
 $payer->surname = "Landa";
@@ -39,13 +34,11 @@ $payer->address = array(
  "zip_code" => "1111"
 );
 $preference->payer = $payer
-
 $preference->back_urls = [ 
  'success' => "https://mp-chirinos77-php.herokuapp.com/back.php", 
  'pending' => "https://mp-chirinos77-php.herokuapp.com/back.php", 
  'failure' => "https://mp-chirinos77-php.herokuapp.com/back.php", 
  ];
- 
 $preference->auto_return = "approved";
 $preference->notification_url = "https://mp-chirinos77-php.herokuapp.com/ipn.php";
 $preference->external_reference = "ggonzalez77@gmail.com";
