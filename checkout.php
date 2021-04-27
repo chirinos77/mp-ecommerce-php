@@ -45,7 +45,7 @@ $preference->back_urls = [
  'failure' => "https://mp-chirinos77-php.herokuapp.com/back.php", 
  ];
 $preference->auto_return = "approved";
-//$preference->notification_url = "https://mp-chirinos77-php.herokuapp.com/ipn.php";
+$preference->notification_url = "https://mp-chirinos77-php.herokuapp.com/ipn1.php";
 $preference->external_reference = "ggonzalez77@gmail.com";
 $preference->save();
 header("Location: $preference->init_point");
