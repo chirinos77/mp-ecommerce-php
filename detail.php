@@ -128,7 +128,7 @@
                                             <?php echo $_POST['price'] ?>
                                         </h3>
                                         <h3 >
-                                            <?php echo "$" . $_POST['unit'] ?>
+                                            <?php echo  $_POST['unit'] ?>
                                         </h3>
                                     </div>
                                     <form action="https://mp-chirinos77-php.herokuapp.com/checkout.php" method="post">
